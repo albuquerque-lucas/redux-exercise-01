@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 10rem;
+}
+
+.header-dark {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.header-light {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0.5rem 1rem;
+}
+
+.list-item {
+  text-decoration: none;
+}
+
+.item-light {
+  color: #333;
+}
+
+.item-dark {
+  color: white;
+}

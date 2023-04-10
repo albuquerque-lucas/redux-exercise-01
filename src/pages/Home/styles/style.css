@@ -1,0 +1,25 @@
+.home-start-container {
+  margin-top: 7rem;
+}
+
+.home-start-container h1, .home-start-container h2 {
+  margin-bottom: 2rem;
+}
+
+.home-start-container .button {
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  padding: .5rem;
+  text-decoration: none;
+}
+
+.button-dark {
+  border: 2px solid white;
+  color: white;
+}
+
+.button-light {
+  border: 2px solid black;
+  color: black;
+}

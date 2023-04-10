@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.light {
+  background: white;
+  color: #333;
+}
+
+.dark{
+  background: #333;
+  color: white;
+}
