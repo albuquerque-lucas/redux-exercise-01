@@ -33,6 +33,7 @@
             "error",
             "always"
         ],
-        "object-curly-spacing": ["error", "always"]
+        "object-curly-spacing": ["error", "always"],
+        "react/jsx-indent-props": ["error", "first"]
     }
 }

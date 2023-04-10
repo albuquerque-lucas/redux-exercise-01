@@ -4,25 +4,25 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import Header from '../../components/Header';
 import Form from '../../components/Form';
-import { changeHomePhaseAction } from '../../redux/reducers/PhaseReducer/actions';
+import { changeHomePhaseOneAction } from '../../redux/reducers/PhaseReducer/actions';
 import './styles/style.css';
 
 class Home extends React.Component {
     changePhase = () => {
         const { dispatch } = this.props;
-        dispatch(changeHomePhaseAction());
+        dispatch(changeHomePhaseOneAction());
     };
     
     render() {
         const { mode, phase } = this.props;
         const { theme } = mode;
-        const { homePhase } = phase;
-        console.log(homePhase);
+        const { homePhaseOne } = phase;
+        console.log(homePhaseOne);
         console.log(this.props);
 
 
         return (
-            homePhase === false ?
+            homePhaseOne === false ?
                 <div>
                     <Header/>
                     <section className='body home-start-container'>
@@ -51,7 +51,7 @@ Home.propTypes = {
         theme: PropTypes.string.isRequired,
     }).isRequired,
     phase: PropTypes.shape({
-        homePhase: PropTypes.bool.isRequired,
+        homePhaseOne: PropTypes.bool.isRequired,
     }).isRequired,
     dispatch: PropTypes.func.isRequired,
 };

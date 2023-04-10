@@ -46,13 +46,20 @@
   padding: 0.5rem 1rem;
 }
 
-.create-form .button-dark {
+.create-form .button-dark,
+.welcome-form .button-dark {
   background-color: #738ADB;
   border: transparent;
 }
 
-.create-form .button-light {
+.create-form .button-light,
+.welcome-form .button-light{
   background-color: #333;
   border: 1px solid black;
   color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
 }
