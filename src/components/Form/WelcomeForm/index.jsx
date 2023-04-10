@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+// import { history } from 'react-router-dom';
 import { changeHomePhaseOneAction } from '../../../redux/reducers/PhaseReducer/actions';
 import { saveUserDataAction } from '../../../redux/reducers/WelcomeDataReducer/actions';
 
