@@ -12,17 +12,17 @@ const phaseReducer = (state =INITIAL_STATE, action) => {
     case CHANGE_HOME_PHASE:
         return ({
             ...state,
-            homePhase: this.homePhase === false ? true : false,
+            homePhase: !state.homePhase,
         });
     case CHANGE_CREATE_PHASE:
         return ({
             ...state,
-            createPhase: this.createPhase === false ? true : false,
+            createPhase: !state.createPhase,
         });
     case CHANGE_DISPLAY_PHASE:
         return ({
             ...state,
-            displayPhase: this.displayPhase === false ? true : false,
+            displayPhase: !state.displayPhase,
         });
     default:
         return state;

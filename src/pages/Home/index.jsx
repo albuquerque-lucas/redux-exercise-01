@@ -4,15 +4,23 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import Header from '../../components/Header';
 import Form from '../../components/Form';
+import { changeHomePhaseAction } from '../../redux/reducers/PhaseReducer/actions';
 import './styles/style.css';
 
 class Home extends React.Component {
+    changePhase = () => {
+        const { dispatch } = this.props;
+        dispatch(changeHomePhaseAction());
+    };
+    
     render() {
         const { mode, phase } = this.props;
         const { theme } = mode;
         const { homePhase } = phase;
         console.log(homePhase);
         console.log(this.props);
+
+
         return (
             homePhase === false ?
                 <div>
@@ -20,7 +28,7 @@ class Home extends React.Component {
                     <section className='body home-start-container'>
                         <h1>Seja bem vindo!</h1>
                         <h2>Deseja testar a aplicação e adicionar uma carta?</h2>
-                        <button className={`button button-${theme}`} to='/create'>Começar</button>
+                        <button className={`button button-${theme}`} onClick={this.changePhase}>Começar</button>
                     </section>
                 </div>
 
@@ -45,6 +53,7 @@ Home.propTypes = {
     phase: PropTypes.shape({
         homePhase: PropTypes.bool.isRequired,
     }).isRequired,
+    dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

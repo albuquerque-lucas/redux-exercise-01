@@ -1,4 +1,4 @@
-.create-form {
+.create-form, .welcome-form {
   display: flex;
   flex-direction: column;
   padding: 3rem 1rem;
@@ -29,7 +29,8 @@
 
 .create-form input,
 .create-form select,
-.create-form textarea {
+.create-form textarea,
+.welcome-form input {
   margin-bottom: 1rem;
 }
 
@@ -39,7 +40,8 @@
   resize: none;
 }
 
-.create-form button {
+.create-form button,
+.welcome-form button {
   font-weight: 700;
   padding: 0.5rem 1rem;
 }
