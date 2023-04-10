@@ -10,7 +10,6 @@ class App extends React.Component {
     render(){
         const { mode } = this.props;
         const { theme } = mode;
-        console.log(theme);
         return (
             <main className={`App ${theme}`}>
                 <Routes>
