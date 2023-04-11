@@ -12,8 +12,6 @@ class DataDisplay extends React.Component {
         const { theme } = themes;
         const { wizardsList } = list;
         const { isLoading } = request;
-        console.log(theme);
-        console.log(wizardsList);
 
         return (
             <div>
