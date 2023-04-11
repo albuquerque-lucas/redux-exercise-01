@@ -1,42 +1,40 @@
 import { REQUEST_STARTED, REQUEST_SUCCESSFUL, REQUEST_FAILED } from './actions';
 
-const initialState = {
-    isLoading: false,
-    wizardsList: [],
-    errorMessage: '',
+const INITIAL_STATE = {
+    spellIsLoading: false,
+    spells: [],
+    spellErrorMessage: '',
 };
-const wizardReducer = (state = initialState, action) => {
+
+const spellsReducer = (state = INITIAL_STATE, action) => {
     const { type } = action;
-    switch (type) {
+    switch(type) {
     case REQUEST_STARTED:
         return {
             ...state,
-            isLoading: true,
+            spellIsLoading: true,
             errorMessage: '',
-            wizardsList: []
+            spells: []
         };
 
     case REQUEST_SUCCESSFUL:
         return {
             ...state,
-            isLoading: false,
-            wizardsList: action.payload,
+            spellIsLoading: false,
+            spells: action.payload,
             errorMessage: ''
         };
 
     case REQUEST_FAILED:
         return {
             ...state,
-            isLoading: false,
+            spellIsLoading: false,
             errorMessage: action.payload,
-            wizardsList: []
+            spells: []
         };
-
     default:
         return state;
     }
 };
 
-
-
-export default wizardReducer;
+export default spellsReducer;
