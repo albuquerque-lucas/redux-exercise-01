@@ -11,6 +11,8 @@ class DataDisplay extends React.Component {
     render() {
         const { themes, dispatch, wizardsList, isLoading, spellsList } = this.props;
         const { theme } = themes;
+        console.log('Spells: ', spellsList);
+        console.log('Wizards: ', wizardsList);
 
         return (
             <div>
