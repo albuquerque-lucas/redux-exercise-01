@@ -8,10 +8,12 @@ import { fetchWizardName } from '../../redux/reducers/WizardReducer/actions';
 
 class DataDisplay extends React.Component {
     render() {
-        const { themes, request, image, dispatch } = this.props;
+        const { themes, request, list, dispatch } = this.props;
         const { theme } = themes;
+        const { wizardsList } = list;
         const { isLoading } = request;
         console.log(theme);
+        console.log(wizardsList);
 
         return (
             <div>
@@ -23,11 +25,17 @@ class DataDisplay extends React.Component {
                         {isLoading ? (
                             <Loading />
                         ) : (
-                            <React.Fragment>
-                                <img src={image.imageURL} alt="" />
+                            <>
                                 <ul className='api-data-list list-one'>
+                                    {wizardsList.map((wizard, index) => {
+                                        if (index < 26) {
+                                            return (
+                                                <li key={wizard.id} className={`list-item-${theme}`}>{wizard.name}</li>
+                                            );
+                                        }
+                                    })}
                                 </ul>
-                            </React.Fragment>
+                            </>
                         )}
                     </div>
                 </section>
@@ -41,13 +49,13 @@ DataDisplay.propTypes = {
         theme: PropTypes.string.isRequired,
     }).isRequired,
     request: PropTypes.bool.isRequired,
-    image: PropTypes.string.isRequired,
+    list: PropTypes.object.isRequired,
     dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
     themes: state.theme,
-    image: state.imageURL,
+    list: state.wizardsList,
     request: state.isLoading,
 });
 

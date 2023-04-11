@@ -6,7 +6,7 @@ import wizardReducer from './WizardReducer';
 const rootReducer = combineReducers({
     theme: themeModeReducer,
     phase: phaseReducer,
-    imageURL: wizardReducer,
+    wizardsList: wizardReducer,
     isLoading: wizardReducer,
 });
 

@@ -25,10 +25,9 @@ export const fetchWizardName = () => {
     return async (dispatch) => {
         try{
             dispatch(requestStarted());
-            const response = await fetch('https://dog.ceo/api/breeds/image/random');
+            const response = await fetch('https://hp-api.onrender.com/api/characters');
             const data = await response.json();
-            console.log(data);
-            dispatch(requestSuccessful(data.message));
+            dispatch(requestSuccessful(data));
         } catch(error){
             dispatch(requestFailed(error.message));
         }
