@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/';
 import Create from './pages/Create';
 import Display from './pages/Display';
+import DataDisplay from './pages/DataDisplay';
 import './App.css';
 class App extends React.Component {
     render(){
@@ -16,6 +17,7 @@ class App extends React.Component {
                     <Route exact path='/' element={ <Home /> } />
                     <Route exact path='/create' element={ <Create /> } />
                     <Route exact path='/display' element={ <Display /> } />
+                    <Route exact path='/data-display' element={ <DataDisplay /> } />
                 </Routes>
             </main>
         );

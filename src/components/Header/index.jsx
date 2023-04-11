@@ -25,6 +25,7 @@ class Header extends React.Component {
                         <li><Link to='/' className={`list-item item-${theme}`}>Home</Link></li>
                         <li><Link to='/create' className={`list-item item-${theme}`}>Create</Link></li>
                         <li><Link to='/display' className={`list-item item-${theme}`}>Display</Link></li>
+                        <li><Link to='/data-display' className={`list-item item-${theme}`}>API</Link></li>
                         <li onClick={this.handleClick}>Tema <FontAwesomeIcon icon={ theme === 'light' ? faMoon : faSun } /></li>
                     </ul>
                 </nav>
